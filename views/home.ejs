@@ -1,0 +1,19 @@
+
+<%-include("partials/header");-%>
+    <h1>Home</h1>
+<p> <%=homeDescription%> </p>
+<% composeDescription.forEach(function(cd){ %>
+    <h1> <%= cd.postTitle %></h1>
+    <p> <%= cd.postBody.substr(0,100) + "..." %> 
+     <a href="  /posts/<%= cd.postTitle %>">Read more</a>
+    <% }) %>
+    </p>
+
+
+
+
+
+<!-- <% console.log(composeDescription); %> -->
+<%-include("partials/footer");-%>
+
+
